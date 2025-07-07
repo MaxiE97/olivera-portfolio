@@ -4,11 +4,11 @@ import { home } from "./content";
 const baseURL = "https://demo.magic-portfolio.com";
 
 const routes = {
-  "/": true,
+  "/": false,
   "/about": true,
   "/work": true,
   "/blog": true,
-  "/gallery": true,
+  "/gallery": false,
 };
 
 const display = {
