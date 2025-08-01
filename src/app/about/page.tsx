@@ -92,7 +92,7 @@ export default function About() {
             <Avatar src={person.avatar} size="xl" />
             <Flex gap="8" vertical="center">
               <Icon onBackground="accent-weak" name="globe" />
-              {person.location}
+              Argentina, Entre Ríos
             </Flex>
             {person.languages.length > 0 && (
               <Flex wrap gap="8">
@@ -215,6 +215,16 @@ export default function About() {
                         </Text>
                       ))}
                     </Column>
+                    {experience.stack && experience.stack.length > 0 && (
+                      <Text as="p" variant="body-default-m" className="mt-4">
+                        <strong className="font-label text-brand-500 dark:text-brand-400">
+                          Stack:
+                        </strong>
+                        <span className="font-code text-brand-500 dark:text-brand-400">
+                          {' '}{experience.stack.join(' | ')}
+                        </span>
+                      </Text>
+                    )}
                     {experience.images.length > 0 && (
                       <Flex fillWidth paddingTop="m" paddingLeft="40" gap="12" wrap>
                         {experience.images.map((image, index) => (

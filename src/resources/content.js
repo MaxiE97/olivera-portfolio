@@ -1,15 +1,15 @@
 import { Logo } from "@once-ui-system/core";
 
 const person = {
-  firstName: "Maximiliano",
-  lastName: "Olivera",
+  firstName: "Olivera",
+  lastName: "Maximiliano",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
   role: "Full-Stack Developer",
   avatar: "/images/avatar.jpg",
   email: "maxi97olivera@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  location: "America/Argentina/Buenos_Aires", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
   languages: ["Español", "Inglés"], // optional: Leave the array empty if you don't want to display languages
 };
 
@@ -30,12 +30,12 @@ const social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/MaxiE97/",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://wwww.linkedin.com/in/olmax",
   },
   {
     name: "Email",
@@ -77,60 +77,68 @@ const about = {
     display: true,
   },
   calendar: {
-    display: true,
+    display: false,
     link: "https://cal.com",
   },
   intro: {
     display: true,
-    title: "Introduction",
+    title: "Introducción",
     description: (
-      <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
-      </>
+    <>
+      <div className="font-body text-lg/relaxed text-neutral-800 dark:text-neutral-200">
+        <p className="mb-4"> {/* mb-4 añade un margen inferior para separar los párrafos */}
+          Soy un desarrollador full-stack con experiencia en el desarrollo de aplicaciones web.
+        </p>
+        <p className="mb-4">
+          Participo activamente en el grupo de investigación de mi universidad,
+          donde colaboro en proyectos que integran herramientas de inteligencia artificial.
+        </p>
+        <p>
+          Me he graduado de dos carreras: Analista de Sistemas y Administración de Empresas. Aunque siempre estoy aprendiendo algo nuevo. 🌱
+        </p>
+      </div>
+    </>
     ),
   },
   work: {
     display: true, // set to false to hide this section
-    title: "Work Experience",
+    title: "Experiencia",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Universidad Tecnológica Nacional FRCU",
+        timeframe: "05/2024 - Presente",
+        role: "Miembro en Grupo de Investigación de Bases de Datos",
+        stack: ["Python", "LangChain", "LLMs", "VectorDBs", "Ollama","Pandas", "open-source embeddings"],
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Investigación en IA y transformers aplicados al Procesamento de Lenguaje Natural.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Desarrollo de sistema por búsqueda de similtud utilizando Retrieval-Augmented Generation (RAG).
+          </>,
+          <>
+            Desarrollo de scripts para evaluar automáticamente la precisión de las respuestas del sistema.
           </>,
         ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],    
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Proyecto freelance para COC EUROPE",
+        timeframe: "11/2024 - 05/2025",
+        role: "Desarrollador Full-Stack",
+        stack: ["Python", "FastApi", "TypeScript","React", "Pandas", "BeautifulSoup", "Supabase","PostgreSQL"],
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Extracción y procesamiento de datos desde múltiples fuentes web mediante scraping.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Limpieza y normalización de datos utilizando.
+          </>,
+          <>
+            Creación de interfaz interactiva en React para visualización, edición y validación de datos.
+          </>,
+          <>
+            Generación automática de fichas técnicas en múltiples idiomas.
           </>,
         ],
         images: [],
@@ -139,15 +147,15 @@ const about = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Educación",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Universidad Tecnológica Nacional",
+        description: <>Analista de Sistemas.</>,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Universidad Autonoma de Entre Ríos",
+        description: <>Tec. en Administración</>,
       },
     ],
   },
@@ -168,19 +176,6 @@ const about = {
           },
           {
             src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
             alt: "Project image",
             width: 16,
             height: 9,
