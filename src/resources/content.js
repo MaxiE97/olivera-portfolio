@@ -10,7 +10,7 @@ const person = {
   avatar: "/images/avatar.jpg",
   email: "maxi97olivera@gmail.com",
   location: "America/Argentina/Buenos_Aires", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["Español", "Inglés"], // optional: Leave the array empty if you don't want to display languages
+  languages: ["Español", "Inglés B2"], // optional: Leave the array empty if you don't want to display languages
 };
 
 const newsletter = {
@@ -35,12 +35,17 @@ const social = [
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://wwww.linkedin.com/in/olmax",
+    link: "https://www.linkedin.com/in/olmax",
   },
   {
     name: "Email",
     icon: "email",
     link: `mailto:${person.email}`,
+  },
+  {
+    name: "WhatsApp",
+    icon: "whatsapp",
+    link: `https://wa.me/543442470784`, // Replace with your 
   },
 ];
 
@@ -94,7 +99,7 @@ const about = {
           donde colaboro en proyectos que integran herramientas de inteligencia artificial.
         </p>
         <p>
-          Me he graduado de dos carreras: Analista de Sistemas y Administración de Empresas. Aunque siempre estoy aprendiendo algo nuevo. 🌱
+          Me gradué de dos carreras: Analista de Sistemas y Administración de Empresas. Aún así siempre estoy aprendiendo algo nuevo. 🌱
         </p>
       </div>
     </>
@@ -151,6 +156,7 @@ const about = {
     institutions: [
       {
         name: "Universidad Tecnológica Nacional",
+        logo: "/images/utn-logo.png",
         description: <>Analista de Sistemas.</>,
       },
       {
@@ -160,27 +166,14 @@ const about = {
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
+    display: false, // set to false to hide this section
+    title: "Habilidades Técnicas",
     skills: [
       {
-        title: "Figma",
+        title: "Python",
         description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
         // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
+        images: [],
       },
     ],
   },
